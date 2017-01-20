@@ -1,0 +1,30 @@
+.aside{
+	&-widget{
+		margin-bottom: 25px;
+		&:last-child{
+			margin-bottom: 0;
+		}
+		&-light{
+			padding: 18px;
+			background-color: setColor(light);
+			@extend .shadow;
+		}
+	}
+}
+.tags-cloud{
+	text-align: center;
+	a{
+	  display: inline-block;
+	  padding: 2.5px 8px;
+	  margin-right: 7.5px;
+	  margin-bottom: 7.5px;
+	  border-radius: 6px;
+	  border: 1px solid #ebeff0;
+	  text-decoration: none;
+	  @extend .transition;
+	  &:hover{
+	  	color: setColor(green);
+	  	border-color: setColor(green);
+	  }
+	}
+}

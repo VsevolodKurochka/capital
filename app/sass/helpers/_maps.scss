@@ -33,11 +33,12 @@ $colors: (
 		light : #f3f3f3
 	),
 	green: (
-		base 	: #5bb85d
+		base 	: #5cc62b,
+		light : lighten(#5cc62b, 48%)
 	),
  	corp: (
 		base	: $corp,
-		light : lighten($corp, 15%)
+		light : lighten($corp, 48%)
  	),
  	light: (
 		base  : #fff

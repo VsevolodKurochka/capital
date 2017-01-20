@@ -18,7 +18,8 @@
   }
   @include resp-min(xs){
     font-size: 18px;
-    padding: 30px;
+    padding: 14.5px 25px;
+    color: inherit;
   }
   &-effect{
     transform: translateZ(0);
@@ -102,6 +103,27 @@
           -webkit-transform-origin: 50% 0;
           transform-origin: 50% 0;
         }
+      }
+    }
+  }
+  &-def{
+    border-radius: 6px;
+    border: 2px solid setColor(green);
+    background-color: transparent;
+    text-align: center;
+    color: inherit;
+    &:hover{
+      background-color: setColor(green, light);
+    }
+    &:last-child{
+      margin-bottom: 0;
+    }
+    &-color{
+      border-color: transparent;
+      background-color: setColor(green);
+      color: setColor(light);
+      &:hover{
+        background-color: lighten(setColor(green), 10%)
       }
     }
   }

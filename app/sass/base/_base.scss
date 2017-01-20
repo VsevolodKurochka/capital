@@ -1,6 +1,7 @@
 body{
-  color: setColor(black, dark);
-  @extend .regular;
+  color: setColor(corp);
+  @extend .roboto;
+  @extend .medium;
   font-size: 18px;
   line-height: 1.42857143;
 }

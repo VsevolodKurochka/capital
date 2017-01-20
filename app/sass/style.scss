@@ -9,19 +9,22 @@
 
 @import 'layouts/grid';
 @import 'layouts/nav';
-@import 'layouts/header';
+//@import 'layouts/header';
+@import 'layouts/aside';
 @import 'layouts/footer';
 
 @import 'components/classes';
 @import 'components/buttons';
 @import 'components/forms';
-@import 'components/list';
-@import 'components/collapse';
+//@import 'components/list';
+//@import 'components/collapse';
 
 @import "dev/text";
 @import "dev/dev";
+@import "dev/post";
+@import "dev/404";
 
-@import 'fontawesome/font-awesome';
+//@import 'fontawesome/font-awesome';
 
 @import 'vendor/modal';
 @import 'vendor/animations';

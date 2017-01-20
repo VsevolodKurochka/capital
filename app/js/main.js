@@ -21,18 +21,18 @@ $(document).ready(function(){
 				$(this).toggleClass(active);
 				toggler();
 			});
-			$('.vnav-menu a').click(function(){
-				var href = $(this).attr('href');
-				$('body,html').animate({
-					scrollTop: $(href).offset().top
-				},2000);
-				$("[data-menu]").removeClass(active);
-				toggler();
-				return false;
-			});
-			$(".vnav-text-hidden").click(function(){
-				$(".vnav-text").toggleClass(active);
-			});
+			// $('.vnav-menu a').click(function(){
+			// 	var href = $(this).attr('href');
+			// 	$('body,html').animate({
+			// 		scrollTop: $(href).offset().top
+			// 	},2000);
+			// 	$("[data-menu]").removeClass(active);
+			// 	toggler();
+			// 	return false;
+			// });
+			// $(".vnav-text-hidden").click(function(){
+			// 	$(".vnav-text").toggleClass(active);
+			// });
 			// function menuSwipe(){
 			// 	if ( $(document).width() <= responsiveBr ) {
 			// 		body.hammer().on("swiperight", function(){

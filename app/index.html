@@ -3,39 +3,112 @@
   <head>
     <title>Main Page</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8"><!--[if lte IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-    <link rel="stylesheet" href="css/style.css">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
     <script src="js/scripts.min.js"></script>
     <script src="js/main.js"></script>
   </head>
   <body>
-    <nav class="vnav">
+    <div class="vnav-wrapper-fixed vnav-wrapper-shadow">
+      <nav class="vnav">
+        <div class="vcontainer">
+          <div class="vrow">
+            <div class="vak-xs-6 vak-md-3">
+              <div class="vnav-logo">
+                <button class="vnav-menu-btn" type="button" data-menu=".vnav-menu"><span></span></button>
+                <div class="block-inline"><img src="img/logo.png" alt=""></div>
+              </div>
+            </div>
+            <div class="vak-xs-12 vak-md-9 vnav-menu vnav-menu-fixed">
+              <ul>
+                      <li class="current-menu-item"><a href="#">Who we are</a></li>
+                      <li><a href="#">What we do</a></li>
+                      <li><a href="#">Resources</a></li>
+                      <li><a href="#">Contact Us</a></li>
+                      <li><a href="#">Investors</a></li>
+                      <li class="border"><a href="#">Set Up An Appointments</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <main class="main-wrapper">
       <div class="vcontainer">
+        <div class="slider"></div>
         <div class="vrow">
-          <div class="vak-xs-6 vak-md-4">
-            <div class="vnav-logo">
-              <button class="vnav-menu-btn" type="button" data-menu=".vnav-menu"><span></span></button>
-              <div class="block-inline vvisible-md vvisible-lg"><img src="img/logo.png" alt=""></div>
-              <div class="block-inline vhidden-md vhidden-lg"><img src="img/logo-responsive.png" alt=""></div>
+          <div class="vak-xs-12 vak-md-4 block-m-b">
+            <div class="widget-block widget-block-why">
+              <div class="widget-text-wrap">
+                <p class="widget-title">Why <span class="black">Capitalogix</span>?</p>
+                <p class="widget-text">The game, the rules, the players have all changed... (targeted towards building intrigue)</p>
+              </div>
             </div>
           </div>
-          <div class="visible-md visible-lg vak-xs-6 vak-md-3 vpull-md-right text-md-right max-md-center">
-            <div class="vnav-text-hidden"><span></span></div>
-            <div class="vnav-text">
-              <p>+38 (063) 505 62 63</p>
+          <div class="vak-xs-12 vak-md-4 block-m-b">
+            <div class="vtabs-horizontal">
+              <ul class="vtabs-links vtabs-list">
+                <li class="active"><a data-tab="tab" data-tab-target="#investor">Investor <span class="black">login</span></a></li>
+                <li><a data-tab="tab" data-tab-target="#trial">Trital <span class="black">login</span></a></li>
+              </ul>
+              <div class="vtabs-content">
+                <div class="vtabs-content-inner active" id="investor"><a class="vbtn vbtn-def vtabs-btn" href="#">Set Up An Appointments</a><a class="vbtn vbtn-def vtabs-btn" href="#">Performance</a><a class="vbtn vbtn-def vbtn-def-color vtabs-btn" href="#">Research initiatives</a></div>
+                <div class="vtabs-content-inner" id="trial"><a class="vbtn vbtn-def vtabs-btn" href="#">Set Up An Appointments</a><a class="vbtn vbtn-def vtabs-btn" href="#">Performance</a><a class="vbtn vbtn-def vbtn-def-color vtabs-btn" href="#">Research initiatives</a></div>
+              </div>
             </div>
           </div>
-          <div class="vak-xs-12 vak-md-5 vnav-menu">
-            <ul>
-                  <li><a href="#sec1">Главная</a></li>
-            </ul>
+          <div class="vak-xs-12 vak-md-4 block-m-b">
+            <div class="widget-block widget-block-what">
+              <div class="widget-text-wrap">
+                <p class="widget-title">What do I <span class="black">need to know</span>?</p>
+                <p class="widget-text">What is neural network? Where do i fit in? (Targeted towards Hires)</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </nav>
-    <p>Content</p>
-    <p>Footer</p>
+      <footer class="footer footer-default footer-v1">
+        <div class="vcontainer">
+          <div class="vrow">
+            <div class="vak-xs-12 vak-sm-6">
+              <div class="footer-man"><img src="img/bigMan.png"></div>
+            </div>
+            <div class="vak-xs-12 vak-sm-6">
+              <div class="footer-man-quote-wrap">
+                <p class="footer-man-quote">«The Game, The Rules, and the players have all changed … Masters of the Universe are being beaten by newcomers...» </p>
+                <p class="footer-man-name">Howard Getson</p>
+                <p class="footer-man-pos">President at Capitalogix</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-absolute">
+          <nav class="vnav vnav-footer">
+            <div class="vcontainer">
+              <div class="vrow">
+                <div class="vak-xs-6 vak-md-3">
+                  <div class="vnav-logo">
+                    <div class="block-inline"><img src="img/logo_white.png" alt=""></div>
+                  </div>
+                </div>
+                <div class="vak-xs-12 vak-md-9 vnav-menu vnav-footer-menu">
+                  <ul>
+                              <li><a href="#">Who we are</a></li>
+                              <li><a href="#">What we do</a></li>
+                              <li><a href="#">Resources</a></li>
+                              <li><a href="#">Contact Us</a></li>
+                              <li><a href="#">Investors</a></li>
+                              <li class="border"><a href="#">Set Up An Appointments</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </footer>
+    </main>
   </body>
 </html>

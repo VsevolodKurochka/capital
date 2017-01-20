@@ -1,0 +1,148 @@
+@include resp-max(md){
+	.vnav-wrapper-fixed + .main-wrapper{
+		margin-top: 55px;
+	}
+	.vnav-wrapper-shadow + .main-wrapper{
+		margin-top: 100px;
+	}
+}
+@include resp-min(md){
+	.vnav-wrapper-fixed + .main-wrapper{
+		margin-top: 89px;
+	}
+	.vnav-wrapper-shadow + .main-wrapper{
+		margin-top: 170px;
+	}
+}
+.main-wrapper{
+	position: relative;
+}
+
+// Widget
+.widget{
+	&-block{
+		padding: 150px 25px 25px 25px;
+		color: #fff;
+		background-size: cover;
+		background-position: 0 0;
+		@extend .shadow;
+		@extend .radius;
+		&-why{
+			background-image: url('../img/whyCapital.png');
+		}
+		&-what{
+			background-image: url('../img/whatDo.png');
+		}
+	}
+	&-title{
+		font-size: 36px;
+		line-height: 1.2;
+		margin-bottom: 10px;
+	}
+	&-text{
+		line-height: 1.25;
+	}
+	@include resp-min(xs){
+		&-title{
+			font-size: 46px;
+		}
+		@include resp-max(md){
+			&-block{
+				padding-top: 220px;
+				width: 400px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+	}
+	@include resp-min(md){
+		&-block{
+			padding-top: 220px;
+			min-height: 434px;
+		}
+		&-title{
+			font-size: 37px;
+		}
+	}
+	@include resp-min(lg){
+		&-title{
+			font-size: 46px;
+		}
+	}
+}
+.block{
+	&-m{
+		&-b{
+			margin-bottom: 30px;
+		}
+		&-s{
+			margin-bottom: 15px;
+		}
+		&-b,
+		&-s{
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+.searchform{
+	font-size: 0;
+	input,
+	&-btn{
+		display: inline-block;
+		font-size: 18px;
+		@extend .radius;
+		@extend .medium;
+		@extend .roboto;
+	}
+	input{
+		border: 2px solid setColor(green);
+		padding: 9px 15px;
+		outline: none;
+		color: setColor(corp);
+		@extend .transition;
+		&::-webkit-input-placeholder{
+      color: setColor(corp);
+    }
+    &:-moz-placeholder {
+      color: setColor(corp);
+    }
+    &::-moz-placeholder {
+      color: setColor(corp);
+    }
+    &:-ms-input-placeholder {
+      color: setColor(corp);
+    }
+    &:focus{
+			border-color: lighten(setColor(green), 15%);
+		}
+	}
+	&-btn{
+		background-color: setColor(green);
+		border: none;
+		text-indent: -9999px;
+	  padding: 11px 30px;
+	  position: relative;
+	  top: -1px;
+	  @include transitionMake(all, linear, 0.3s);
+	  &:hover{
+	  	background-color: lighten(setColor(green), 15%);
+	  }
+	  &:after{
+	  	@extend .pseudo;
+	  	left: 50%;
+	  	top: 50%;
+	  	width: 26px;
+	  	height: 26px;
+	  	margin-left: -13px;
+	  	margin-top: -13px;
+	  	@include bg("../img/icon.png");
+	  }
+	}
+	@include resp-min(sm){
+		input{
+			margin-right: 15px;
+		}
+	}
+}

@@ -1,8 +1,8 @@
-mixin item(href, active)
-	if(active)
-		li(class="active"): a( href=href ): block
-	else	
-		li: a( href=href ): block
+mixin item(href, itemClass)
+	if(itemClass)
+		li(class=itemClass): a(href=href): block
+	else
+		li: a(href=href): block
 mixin button(buttonClass, modalTarget)
 
 	- buttonClass = buttonClass || 'vbtn vbtn-effect-shutter-vertical-out vbtn-corp'
@@ -13,3 +13,8 @@ mixin button(buttonClass, modalTarget)
 		- modalTarget = "#modalform"
 
 	button(class=buttonClass data-modal="vmodal" data-modal-target=modalTarget): block
+mixin widget()
+	.widget-block
+		.widget-text-wrap
+			p.widget-title Why <span class="black">Capitalogix</span>?
+			p.widget-text The game, the rules, the players have all changed... (targeted towards building intrigue)

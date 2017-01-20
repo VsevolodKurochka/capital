@@ -1,57 +1,55 @@
 .vtabs{
+  &-horizontal{
+    @extend .shadow;
+    @extend .radius;
+    background-color: #f0f4f7;
+  }
   &-wrap,
   &-links,
   &-content{
     @extend .cf;
   }
   &-links{
-    margin-bottom: getComp(gutter) * 3;
     text-align: center;
   }
   &-list{
-    display: inline-block;
     font-size: 0;
     a{
       display: block;
-      min-width: 150px;
-      @extend .relative;
-      padding: 10px;
-      background-color: transparent;
-      text-decoration: none;
-      color: inherit;     
-      font-size: 18px;
+      background-color: #f0f4f7;
+      color: #d2d2d2;
+      border-radius: 6px 6px 0 0;
+      padding: 20px 10px;
+      font-size: 16px;
       @extend .transition;
-      &:after{
-        @extend .pseudo;
-        left: 0;
-        bottom: -15px;
-        width: 100%;
-        height: 5px;
-        opacity: 1;
-        transform: translateY(-7.5px);
-        @extend .transition;
-      }
       &:hover{
         @extend %effectTab;
       }
     }
     li{
-      display: block;
+      display: inline-block;
+      width: 50%;
       &.active{
         a{
+          background-color: #fff;
           @extend %effectTab;
         }
       }
     }
     %effectTab{
       color: setColor(corp);
-      &:after{
-        background-color: setColor(corp, light);
-        transform: none;
-      }
     } 
   }
+  &-btn{
+    width: 100%;
+    margin-bottom: 23px;
+    display: block;
+    
+  }
   &-content{
+    background-color: setColor(light);
+    border-radius: 0 0 6px 6px;
+    padding: 30px 15px;
     &-inner{
       display: none;
       &.active{
@@ -61,18 +59,23 @@
   }
   @include resp-min(sm){
     &-list{
-      padding-bottom: 10px;
-      border-bottom: 5px solid setColor(black, light);
-      li{
-        display: inline-block;
+      a{
+        font-size: 18px;
       }
     }
+    &-content{
+      padding: 65px 15px 80px;
+    }
   }
-  @include resp-max(sm){
+  @include resp-min(lg){
     &-list{
-      li:not(:last-child){
-        margin-bottom: 30px;
+      a{
+        font-size: 24px;
       }
+    }
+    &-content{
+      padding-left: 45px;
+      padding-right: 45px;
     }
   }
 }

@@ -1,0 +1,54 @@
+.page-not-found{
+	display: flex;
+	width: 100%;
+	height: 100vh;
+	text-align: center;
+	justify-content: center;
+	flex-direction: column;
+	color: setColor(light);
+	@include bg('../img/bigAmerica.png');
+	@extend .black;
+	&-title{
+		font-size: 100px;
+		&-small{
+			font-size: 25px;
+		}
+	}
+	&-title,
+	&-title-small{
+		line-height: 1;
+	}
+	@include resp-max(md){
+		margin-top: -100px;
+	}
+	@include resp-min(xs){
+		&-title{
+			font-size: 200px;
+			&-small{
+				font-size: 50px;
+			}
+		}
+	}
+	@include resp-min(md){
+		margin-top: -170px;
+		
+	}
+	@include resp-min(lg){
+		@media (min-height: 400px){
+			&-title{
+				font-size: 200px;
+				&-small{
+					font-size: 50px;
+				}
+			}
+		}
+		@media (min-height: 700px){
+			&-title{
+				font-size: 360px;
+				&-small{
+					font-size: 87px;
+				}
+			}
+		}
+	}
+}

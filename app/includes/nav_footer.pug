@@ -1,16 +1,14 @@
 include mixins
-nav.vnav
+nav.vnav.vnav-footer
 	.vcontainer
 		.vrow
 			.vak-xs-6.vak-md-3
 				.vnav-logo
-					button(type="button" class="vnav-menu-btn" data-menu=".vnav-menu")
-						span
 					.block-inline
-						img(src="img/logo.png" alt="")
-			.vak-xs-12.vak-md-9.vnav-menu.vnav-menu-fixed
+						img(src="img/logo_white.png" alt="")
+			.vak-xs-12.vak-md-9.vnav-menu.vnav-footer-menu
 				ul
-					+item("#", "current-menu-item") Who we are
+					+item("#") Who we are
 					+item("#") What we do
 					+item("#") Resources
 					+item("#") Contact Us
