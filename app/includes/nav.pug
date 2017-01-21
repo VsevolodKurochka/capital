@@ -2,12 +2,11 @@ include mixins
 nav.vnav
 	.vcontainer
 		.vrow
-			.vak-xs-6.vak-md-3
+			.vak-xs-12.vak-md-3
 				.vnav-logo
-					button(type="button" class="vnav-menu-btn" data-menu=".vnav-menu")
+					button(type="button" class="vnav-menu-btn" data-menu=".vnav-menu-fixed")
 						span
-					.block-inline
-						img(src="img/logo.png" alt="")
+					a(href="#"): img(src="img/logo.png" alt="")
 			.vak-xs-12.vak-md-9.vnav-menu.vnav-menu-fixed
 				ul
 					+item("#", "current-menu-item") Who we are

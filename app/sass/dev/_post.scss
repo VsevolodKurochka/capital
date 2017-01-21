@@ -3,7 +3,9 @@
 		width: 100%;
 		position: relative;
 		margin-bottom: 30px;
-
+		overflow: hidden;
+		min-height: 200px;
+		@extend .radius;
 		&:last-child{
 			margin-bottom: 0;
 		}
@@ -22,6 +24,9 @@
 
 		font-size: 0;
 		@extend %postFluid;
+		img{
+			max-width: none;
+		}
 		&:after{
 			@extend .pseudo;
 			@extend %postFluid;
@@ -41,7 +46,7 @@
 		text-align: right;
 	}
 	&-title{
-		
+		margin-bottom: 20px;
 		a{
 			display: block;
 			color: inherit;
@@ -55,13 +60,74 @@
 			background-color: setColor(green);
 		}
 	}
-	@include resp-min(lg){
+	@include resp-min(md){
 		&-wrap{
 			min-height: 440px;
 		}
 		&-title{
-			font-size: 30px;
+			font-size: 26px;
 			padding-right: 100px;
+		}
+	}
+	@include resp-min(lg){
+		&-title{
+			font-size: 30px;
+		}
+	}
+	&-column{
+		opacity: 0.2;
+		@extend .transition;
+		&:hover{
+			opacity: 0.8;
+		}
+		&-image{
+			@extend .fs-0;
+			width: 100%;
+			height: 200px;
+			overflow: hidden;
+			position: relative;
+			img{
+				position: absolute;
+				left: 0;
+				top: 0;
+				max-width: none;
+				border-radius: 6px 6px 0 0;
+			}
+		}
+		&-title{
+			line-height: 1.2;
+			display: block;
+			color: setColor(corp);
+			margin-bottom: 15px;
+			font-size: 18px;
+			text-decoration: none;
+			@extend .bold;
+		}
+		&-body{
+			padding: 15px;
+			font-size: 14px;
+			color: setColor(black, black);
+		}
+		@include resp-max(sm){
+			&-wrap{
+				margin-bottom: 30px;
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+		}
+		@include resp-min(md){
+			&-title{
+				font-size: 24px;
+			}
+			&-body{
+				font-size: inherit;
+			}
+		}
+		@include resp-min(lg){
+			&-image{
+				height: 254px;
+			}
 		}
 	}
 }

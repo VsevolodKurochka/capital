@@ -129,6 +129,14 @@ End:  HIDDEN AND VISIBLE UTILITIES
   @extend %padding-block;
   @extend .relative;
 }
+.no-pb{
+  padding-bottom: 0;
+}
+@include resp-min(sm){
+  .min-sm-no-pb{
+    padding-bottom: 0;
+  }
+}
 .vpull{
   &-left{
     float: left;
@@ -139,9 +147,9 @@ End:  HIDDEN AND VISIBLE UTILITIES
 }
 @each $br-name, $br-value in $breakpoints{
   @include resp-min($br-name){
-    // .vpull-#{$br-name}-right{
-    //   float: right;
-    // }
+    .vpull-#{$br-name}-right{
+      float: right;
+    }
     // .text-#{$br-name}-right{
     //   text-align: right;
     // }

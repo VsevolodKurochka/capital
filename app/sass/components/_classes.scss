@@ -22,6 +22,17 @@
 .radius{
   border-radius: 6px;
 }
+.color{
+  &-light{
+    color: setColor(light);
+  }
+  &-black{
+    color: setColor(black, black);
+  }
+}
+.fs-0{
+  font-size: 0;
+}
 @for $i from 1 through 3{
   .index-#{$i}{
     z-index: $i;

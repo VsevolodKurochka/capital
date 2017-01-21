@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>Main Page</title>
+    <title>Main Page(v2)</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8"><!--[if lte IE 9]>
@@ -12,7 +12,7 @@
     <script src="js/main.js"></script>
   </head>
   <body>
-    <div class="vnav-wrapper-fixed vnav-wrapper-shadow">
+    <div class="vnav-wrapper-fixed">
       <nav class="vnav">
         <div class="vcontainer">
           <div class="vrow">
@@ -36,18 +36,22 @@
       </nav>
     </div>
     <main class="main-wrapper">
-      <div class="vcontainer">
-        <div class="slider"></div>
-        <div class="vrow">
-          <div class="vak-xs-12 vak-md-4 block-m-b">
-            <div class="widget-block widget-block-why">
-              <div class="widget-text-wrap"><a href="#">
-                  <p class="widget-title">Why <span class="black">Capitalogix</span>?</p>
-                  <p class="widget-text">The game, the rules, the players have all changed... (targeted towards building intrigue)</p></a></div>
+      <div class="greeting">
+        <div class="vcontainer">
+          <div class="vrow">
+            <div class="vak-xs-12 vak-md-5 vak-lg-4 color-light greeting-column">
+              <p class="greeting-title">Capitalogix</p>
+              <p class="greeting-title-big black">More ways ot win</p>
             </div>
           </div>
-          <div class="vak-xs-12 vak-md-4 block-m-b">
-            <div class="vtabs-horizontal">
+          <div class="video-btn-wrap">
+            <button class="video-btn">
+              <div class="video-btn-inner"></div>
+              <div class="video-btn-text">Play<br>video</div>
+            </button>
+          </div>
+          <div class="vrow greeting-margin">
+            <div class="vtabs-vertical">
               <ul class="vtabs-links vtabs-list">
                 <li class="active"><a data-tab="tab" data-tab-target="#investor">Investor <span class="black">login</span></a></li>
                 <li><a data-tab="tab" data-tab-target="#trial">Trital <span class="black">login</span></a></li>
@@ -58,16 +62,68 @@
               </div>
             </div>
           </div>
-          <div class="vak-xs-12 vak-md-4 block-m-b">
-            <div class="widget-block widget-block-what">
-              <div class="widget-text-wrap"><a href="#">
-                  <p class="widget-title">What do I <span class="black">need to know</span>?</p>
-                  <p class="widget-text">What is neural network? Where do i fit in? (Targeted towards Hires)</p></a></div>
+        </div>
+      </div>
+      <div class="vsection no-pb">
+        <div class="vcontainer">
+          <div class="vrow">
+            <div class="vak-xs-12 vak-md-5 column-text-image max-md-center">
+              <p class="vtitle-page">Why <span class="black">Capitalogix</span>?</p>
+              <p class="color-black">The game, the rules, the players have all changed... (targeted towards building intrigue)</p>
+            </div>
+            <div class="vak-xs-12 vak-md-7 text-center">
+              <div class="fs-0"><img src="img/mans.png"></div>
             </div>
           </div>
         </div>
       </div>
-      <footer class="footer footer-default footer-v1">
+      <div class="vsection bgHead">
+        <div class="vcontainer">
+          <div class="vrow">
+            <div class="vak-xs-12 vak-md-7 vak-lg-6 vpull-md-right column-text-image max-md-center min-md-right color-light">
+              <p class="vtitle-page">What do I <span class="black">need to know</span>?</p>
+              <p>What is neural network? Where do <br class="vvisible-md vvisible-lg"> i fit in? (Targeted towards Hires)</p>
+            </div>
+            <div class="vak-xs-12 vak-md-5 vak-lg-6 text-center">
+              <div class="fs-0"><img src="img/head.png"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="vsection">
+        <div class="vcontainer">
+          <div class="vrow">
+            <p class="text-center vtitle-page b-m">Latest <span class="black">blog</span> posts</p>
+          </div>
+          <div class="vrow">
+            <div class="vak-xs-12 vak-sm-4 post-column-wrap">
+              <div class="post-column">
+                <div class="post-column-image"><a href="#"><img src="img/blog1.png"></a></div>
+                <div class="post-column-body"><a class="post-column-title" href="#">Genius Network Members RULE!</a>
+                  <p>with Andy Churchill, Charles Poliquin, Dan Kuschell and 27 others at Genius Network...</p>
+                </div>
+              </div>
+            </div>
+            <div class="vak-xs-12 vak-sm-4 post-column-wrap">
+              <div class="post-column">
+                <div class="post-column-image"><a href="#"><img src="img/blog1.png"></a></div>
+                <div class="post-column-body"><a class="post-column-title" href="#">Genius Network Members RULE!</a>
+                  <p>with Andy Churchill, Charles Poliquin, Dan Kuschell and 27 others at Genius Network...</p>
+                </div>
+              </div>
+            </div>
+            <div class="vak-xs-12 vak-sm-4 post-column-wrap">
+              <div class="post-column">
+                <div class="post-column-image"><a href="#"><img src="img/blog1.png"></a></div>
+                <div class="post-column-body"><a class="post-column-title" href="#">Genius Network Members RULE!</a>
+                  <p>with Andy Churchill, Charles Poliquin, Dan Kuschell and 27 others at Genius Network...		</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="vsection min-sm-no-pb">
         <div class="vcontainer">
           <div class="vrow">
             <div class="vak-xs-12 vak-sm-6">
@@ -81,6 +137,18 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <footer class="footer footer-v2">
+        <div class="vcontainer">
+          <form class="cf vmain-form">
+            <div class="vak-xs-12 vak-md-9 vmain-form-col">
+              <input placeholder="Enter your email">
+            </div>
+            <div class="vak-xs-12 vak-md-3 vmain-form-col">
+              <button class="vbtn vbtn-def-color form-submit">Get details</button>
+            </div>
+          </form>
         </div>
         <div class="footer-absolute">
           <nav class="vnav">

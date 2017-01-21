@@ -1,0 +1,137 @@
+%videoFluid{
+	width: 100%;
+	height: 100%;
+}
+
+.video{
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	&-btn{
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
+		outline: none;
+		z-index: z('default');
+		&-inner{
+			display: inline-block;
+			position: absolute;
+			width: 80px;
+			height: 80px;
+			left: 50%;
+			top: 50%;
+			margin-top: -40px;
+			margin-left: -40px;
+			background-color: setColor(green);
+			border-radius: 100%;
+			@extend .transition;
+			&:after{
+				@extend .pseudo;
+				left: 50%;
+				top: 50%;
+				margin-left: -10px;
+				margin-top: -10px;
+				border: 10px solid transparent;
+				border-left: 30px solid white;
+			}
+		}
+		&-text{
+			position: absolute;
+			right: -35px;
+			top: 50%;
+			margin-top: -21px;
+			text-align: left;
+			font-size: 18px;
+			font-style: italic;
+			color: #789487;
+			transform: translateX(-15px);
+			opacity: 0;
+			@extend .regular;
+			@extend .transition;
+			&:after{
+				@extend .pseudo;
+				left: -65px;
+				top: 50%;
+				margin-top: -51.5px;
+				width: 51px;
+				height: 103px;
+				@include bg("../img/borderBtn.png");
+			}
+		}
+		&:hover &-text{
+			opacity: 1;
+			transform: none;
+		}
+		&:hover &-inner{
+			background-color: lighten(setColor(green), 10%);
+		}
+	}
+	@include resp-max(md){
+		&-btn{
+			&-wrap{
+				text-align: center;
+				margin-top: 30px;
+				margin-bottom: 30px;
+			}
+			width: 150px;
+			height: 110px;
+			position: relative;
+			display: inline-block;
+		}
+	}
+	@include resp-min(md){
+		&-btn{
+			&-wrap{
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 150px;
+				height: 110px;
+				margin-left: -40px;
+				margin-top: -140px;
+			}
+		}
+	}
+}
+.greeting{
+	@include bg("../img/header.jpg", center center, no-repeat, cover);
+	position: relative;
+	
+	overflow: hidden;
+	padding-top: 30px;
+	&-title{
+		margin-bottom: 10px;
+		font-size: 30px;
+		&-big{
+			font-size: 50px;
+			line-height: 1.2;
+		}
+	}
+	@include resp-max(md){
+		border-bottom: 10px solid #f0f4f7;
+		&-column{
+			text-align: center;
+		}
+		.vtabs-content{
+			border-radius: 0;
+		}
+	}
+	@include resp-min(sm){
+		padding-top: 60px;
+		&-title{
+			font-size: 48px;
+			&-big{
+				font-size: 72px;
+			}
+		}
+	}
+	@include resp-min(md){
+		min-height: 650px;
+		padding-top: 135px;
+		&-margin{
+			margin-top: 120px;
+		}		
+	}
+}

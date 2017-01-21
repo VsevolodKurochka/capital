@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 		// VARIABLES
-		var header_menu_name 	= 'vnav-menu',
+		var header_menu_name 	= 'vnav-menu-fixed',
 				header_menu 			= $('.' + header_menu_name),
 				body 							= $("body"),
 				visibility        = "in visible",

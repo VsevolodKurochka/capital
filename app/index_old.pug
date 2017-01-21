@@ -1,0 +1,92 @@
+extends includes/layout
+block title
+	title Main Page(v2)
+block navigation
+	.vnav-wrapper-fixed
+		include includes/nav
+block content
+	.greeting
+		//- video(poster="img/header.jpg" class="video" playsinline autoplay="autoplay" muted loop="loop")
+		//- 	source(src="http://video.webmfiles.org/big-buck-bunny_trailer.webm" type="video/webm")
+
+		.vcontainer
+			.vrow
+				.vak-xs-12.vak-md-5.vak-lg-4.color-light.greeting-column
+					p.greeting-title Capitalogix
+					p.greeting-title-big.black More ways ot win
+			.video-btn-wrap
+				button.video-btn
+					.video-btn-inner
+					.video-btn-text Play<br>video
+			.vrow.greeting-margin
+				.vtabs-vertical
+					ul.vtabs-links.vtabs-list
+						li.active: a(data-tab="tab" data-tab-target="#investor") Investor <span class="black">login</span>
+						li: a(data-tab="tab" data-tab-target="#trial") Trital <span class="black">login</span>
+					.vtabs-content
+						.vtabs-content-inner.active#investor
+							a(href="#" class="vbtn vbtn-def vtabs-btn") Set Up An Appointments
+							a(href="#" class="vbtn vbtn-def vtabs-btn") Performance
+							a(href="#" class="vbtn vbtn-def vbtn-def-color vtabs-btn") Research initiatives
+						.vtabs-content-inner#trial
+							a(href="#" class="vbtn vbtn-def vtabs-btn") Set Up An Appointments
+							a(href="#" class="vbtn vbtn-def vtabs-btn") Performance
+							a(href="#" class="vbtn vbtn-def vbtn-def-color vtabs-btn") Research initiatives
+	.vsection.no-pb
+		.vcontainer
+			.vrow
+				.vak-xs-12.vak-md-5.column-text-image.max-md-center
+					p.vtitle-page Why <span class="black">Capitalogix</span>?
+					p.color-black The game, the rules, the players have all changed... (targeted towards building intrigue)
+				.vak-xs-12.vak-md-7.text-center
+					.fs-0
+						img(src="img/mans.png")
+	.vsection.bgHead
+		.vcontainer
+			.vrow
+				.vak-xs-12.vak-md-7.vak-lg-6.vpull-md-right.column-text-image.max-md-center.min-md-right.color-light
+					p.vtitle-page What do I <span class="black">need to know</span>?
+					p What is neural network? Where do <br class="vvisible-md vvisible-lg"> i fit in? (Targeted towards Hires)
+				.vak-xs-12.vak-md-5.vak-lg-6.text-center
+					.fs-0
+						img(src="img/head.png")
+	.vsection
+		.vcontainer
+			.vrow
+				p.text-center.vtitle-page.b-m Latest <span class="black">blog</span> posts
+			.vrow
+				.vak-xs-12.vak-sm-4.post-column-wrap
+					.post-column
+						.post-column-image
+							a(href="#"): img(src="img/blog1.png")
+						.post-column-body
+							a(href="#").post-column-title Genius Network Members RULE!
+							p with Andy Churchill, Charles Poliquin, Dan Kuschell and 27 others at Genius Network...
+				.vak-xs-12.vak-sm-4.post-column-wrap
+					.post-column
+						.post-column-image
+							a(href="#"): img(src="img/blog1.png")
+						.post-column-body
+							a(href="#").post-column-title Genius Network Members RULE!
+							p with Andy Churchill, Charles Poliquin, Dan Kuschell and 27 others at Genius Network...
+				.vak-xs-12.vak-sm-4.post-column-wrap
+					.post-column
+						.post-column-image
+							a(href="#"): img(src="img/blog1.png")
+						.post-column-body
+							a(href="#").post-column-title Genius Network Members RULE!
+							p with Andy Churchill, Charles Poliquin, Dan Kuschell and 27 others at Genius Network...		
+	.vsection.min-sm-no-pb
+		.vcontainer
+			.vrow
+				include includes/partials/review
+block footer
+	footer.footer.footer-v2
+		.vcontainer
+			form.cf.vmain-form
+				.vak-xs-12.vak-md-9.vmain-form-col
+					input(placeholder="Enter your email")
+				.vak-xs-12.vak-md-3.vmain-form-col
+					button.vbtn.vbtn-def-color.form-submit Get details
+		.footer-absolute
+			include includes/nav_footer

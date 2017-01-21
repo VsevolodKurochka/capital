@@ -5,6 +5,9 @@
 	.vnav-wrapper-shadow + .main-wrapper{
 		margin-top: 100px;
 	}
+	.main-content{
+		margin-bottom: 30px;
+	}
 }
 @include resp-min(md){
 	.vnav-wrapper-fixed + .main-wrapper{
@@ -33,15 +36,20 @@
 		&-what{
 			background-image: url('../img/whatDo.png');
 		}
+		a{
+			color: inherit;
+			text-decoration: none;
+		}
 	}
 	&-title{
-		font-size: 36px;
+		font-size: 34px;
 		line-height: 1.2;
 		margin-bottom: 10px;
 	}
 	&-text{
 		line-height: 1.25;
 	}
+
 	@include resp-min(xs){
 		&-title{
 			font-size: 46px;
@@ -101,6 +109,8 @@
 		padding: 9px 15px;
 		outline: none;
 		color: setColor(corp);
+		width: calc(100% - 75px);
+  	margin-right: 15px;
 		@extend .transition;
 		&::-webkit-input-placeholder{
       color: setColor(corp);
@@ -140,9 +150,82 @@
 	  	@include bg("../img/icon.png");
 	  }
 	}
-	@include resp-min(sm){
-		input{
-			margin-right: 15px;
+	@include resp-min(md){
+		@include resp-max(lg){
+			input{
+				max-width: 70%;
+			}
 		}
 	}
+}
+.review{
+	&-man{
+		font-size: 0;
+		&-quote{
+			font-size: 20px;
+			font-style: italic;
+			&-wrap{
+				line-height: 1.3;
+				position: relative;
+			}
+		}
+		&-name{
+			margin-top: 30px;
+			font-size: 24px;
+		}
+		&-pos{
+			margin-top: 15px;
+		}
+		@include resp-max(sm){
+			border-bottom: 2px solid #141319;
+			margin-bottom: 15px;
+			&-quote{
+				&-wrap{
+					text-align: center;
+				}
+			}
+		}
+		@include resp-max(md){
+			text-align: center;
+			img{
+				max-height: 300px;
+			}
+		}
+		@include resp-min(sm){
+			&-quote{
+				font-size: 24px;
+			}
+			&-pos{
+				margin-top: 10px;
+			}
+		}
+		@include resp-min(md){
+			&-quote{
+				font-size: 30px;
+				&-wrap{
+					top: 110px;
+				}
+			}
+		}
+		@include resp-min(lg){
+			&-quote{
+				font-size: 36px;
+				&-wrap{
+				  top: 117px;
+				  left: -107px;
+				}
+			}
+		}
+	}
+}
+.column-text-image{
+	@include resp-max(md){
+		margin-bottom: 30px;
+	}
+	@include resp-min(md){
+		margin-top: 120px;
+	}
+}
+.bgHead{
+	@include bg('../img/bgHead.jpg', center center);
 }
